@@ -8,6 +8,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MaterialModule } from './modules/material/material.module';
 import { TodoComponent } from './todo/todo.component';
 import { UserComponent } from './user/user.component';
+import { ReactiveModule } from './user/reactive/reactive.module';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { UserComponent } from './user/user.component';
     MaterialModule,
     MatFormFieldModule,
     MatInputModule,
+    ReactiveModule,
   ],
   providers: [
     provideAnimationsAsync()

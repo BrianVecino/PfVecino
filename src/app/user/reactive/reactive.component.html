@@ -1,0 +1,9 @@
+<section *ngIf="post$ | async as postInfo; else loaderOrError">
+  <h1>{{ postInfo.title }}</h1>
+</section>
+<ng-template #loaderOrError>
+  <section *ngIf="hasError; else loader">
+    Ha ocurrido un error, refresca la página para intentar nuevamente
+  </section>
+  <ng-template #loader>Loading...</ng-template>
+</ng-template>
