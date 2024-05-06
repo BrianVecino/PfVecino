@@ -1,0 +1,20 @@
+<div mat-dialog-content >
+
+    <form [formGroup]="loginForm" >
+    
+    <mat-form-field>
+        <input formControlName="email" matInput />
+        <mat-label>Email</mat-label>
+    </mat-form-field>
+    
+    
+    <mat-form-field>
+        <input formControlName="password" matInput />
+        <mat-label>password</mat-label>
+    </mat-form-field>
+  
+    
+    </form>
+
+    <button (click)="login()" mat-button>Guardar</button>
+    </div>

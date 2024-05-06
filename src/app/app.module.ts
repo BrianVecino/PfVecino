@@ -9,12 +9,16 @@ import { MaterialModule } from './modules/material/material.module';
 import { TodoComponent } from './todo/todo.component';
 import { UserComponent } from './user/user.component';
 import { ReactiveModule } from './user/reactive/reactive.module';
+import { LoginComponent } from './auth/login/login.component';
+import { LoginModule } from './auth/login/login.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     TodoComponent,
     UserComponent,
+    LoginComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -23,6 +27,7 @@ import { ReactiveModule } from './user/reactive/reactive.module';
     MatFormFieldModule,
     MatInputModule,
     ReactiveModule,
+    LoginModule
   ],
   providers: [
     provideAnimationsAsync()
