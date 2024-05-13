@@ -11,6 +11,9 @@ import { UserComponent } from './user/user.component';
 import { ReactiveModule } from './user/reactive/reactive.module';
 import { LoginComponent } from './auth/login/login.component';
 import { LoginModule } from './auth/login/login.module';
+import { HttpClientModule } from '@angular/common/http';
+import { ApiComponentModule } from './user/api-component/api-component.module';
+
 
 @NgModule({
   declarations: [
@@ -27,7 +30,9 @@ import { LoginModule } from './auth/login/login.module';
     MatFormFieldModule,
     MatInputModule,
     ReactiveModule,
-    LoginModule
+    LoginModule,
+    HttpClientModule,
+    ApiComponentModule
   ],
   providers: [
     provideAnimationsAsync()

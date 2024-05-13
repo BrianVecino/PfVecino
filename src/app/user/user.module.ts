@@ -7,16 +7,18 @@ import { UserDialogComponent } from './user-dialog/user-dialog.component';
 
 import { ReactiveFormsModule } from '@angular/forms';
 
+
+
 @NgModule({
   declarations: [
-    UserDialogComponent
+    UserDialogComponent,
   ],
   imports: [
     CommonModule,
     MaterialModule,
     MatFormFieldModule,
     MatInputModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   exports : [  MatFormFieldModule,
     MatInputModule]
