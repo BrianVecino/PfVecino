@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, isDevMode } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { AppRoutingModule } from './app-routing.module';
@@ -13,6 +13,10 @@ import { LoginComponent } from './auth/login/login.component';
 import { LoginModule } from './auth/login/login.module';
 import { HttpClientModule } from '@angular/common/http';
 import { ApiComponentModule } from './user/api-component/api-component.module';
+import { StoreModule } from '@ngrx/store';
+import { CounterModule } from './todo/counter/counter.module';
+import { rootReducer } from './todo/counter/state/store';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
 
 @NgModule({
@@ -21,7 +25,6 @@ import { ApiComponentModule } from './user/api-component/api-component.module';
     TodoComponent,
     UserComponent,
     LoginComponent,
-    
   ],
   imports: [
     BrowserModule,
@@ -32,7 +35,10 @@ import { ApiComponentModule } from './user/api-component/api-component.module';
     ReactiveModule,
     LoginModule,
     HttpClientModule,
-    ApiComponentModule
+    ApiComponentModule,
+    StoreModule.forRoot(rootReducer, {}),
+    CounterModule,
+    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() })
   ],
   providers: [
     provideAnimationsAsync()
